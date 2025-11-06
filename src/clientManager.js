@@ -3,8 +3,6 @@ let connectionState = 'disconnected';
 let clientType = null;
 const eventActions = new Map();
 
-// Notes from Rishi: created a general registration system with WebSocket 
-// then had AI teach me how to add best practices like timeouts and promises
 export function registerToServer(type) {
     return new Promise((resolve, reject) => {
         if (connectionState === 'connecting') {
